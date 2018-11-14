@@ -1,0 +1,276 @@
+$blue-cyber : #00b8c3;
+$dark-blue-cyber: #063F3C;
+
+.cyber-lunes {
+  box-sizing: border-box;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: minmax(auto, 80%);
+  justify-content: center;
+  font-family: sans-serif;
+}
+
+.cyberlunes main{
+  height: 650px;
+}
+
+.cyber-monday {
+  &__container {
+    overflow-x: hidden;
+    height: auto;
+    display: grid;
+    grid-template-areas:
+      "title video"
+      "clock video";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 1fr;
+    &__title {
+      grid-area: title;
+      padding: 20px;
+      .cyber-title {
+        justify-content: center;
+        h1 {
+          font-size: 3em;
+          font-weight: bold;
+          text-align: center;
+          line-height: 1.5;
+          color: $dark-blue-cyber;
+          span{
+            color: $blue-cyber;
+          }
+        }
+        h3 {
+          font-size: 2.8em;
+          font-weight: bold;
+          text-align: center;
+          line-height: .6;
+          color: $dark-blue-cyber;
+          margin: 10px 0;
+          span{
+            font-weight: bold;
+            font-size: .8em;
+          }
+          span:nth-child(2){
+            font-weight: 300;
+            font-size: .5em;
+            line-height: 1.2;
+          }
+        }
+      }
+    }
+    &__video {
+      grid-area: video;
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+      .overlay-cyber-image{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        opacity: 1;
+        background-color: $blue-cyber;
+      }
+      img {
+        position: absolute;
+        height: 100%;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%) scaleX(-1);
+      }
+    }
+    &__clock {
+      grid-area: clock;
+      padding: 0 100px;
+      &__main-desc {
+        text-align: center;
+        color: $dark-blue-cyber;
+        h2 {
+          font-size: 2em;
+          font-weight: bold;
+          color: $blue-cyber;
+          text-align: center;
+          line-height: 2;
+        }
+        h4{
+          font-weight: 550;
+          font-size: 1.2em;
+        }
+      }
+      &__content-text {
+        text-align: center;
+        padding: 0 10px;
+        color: $dark-blue-cyber;
+        p{
+          font-size: 1.2em;
+        }
+      }
+      &__counter {
+        h5 {
+          text-align: center;
+          font-size: 1.3em;
+          line-height: 2;
+          font-weight: 700;
+          margin-top: 5px;
+          color: $dark-blue-cyber;
+        }
+        img {
+          width: 150px;
+          margin: auto;
+          display: block;
+        }
+        ul {
+          list-style: none;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          justify-content: center;
+          padding: 0;
+          li {
+            text-align: center;
+            background-color: $dark-blue-cyber;
+            margin: 20px;
+            border-radius: 10px;
+            padding: 15px;
+            span {
+              color: $blue-cyber;
+              font-size: .8em;
+              line-height: 1;
+              text-transform: uppercase;
+              display: block;
+              margin: 0;
+            }
+            p {
+              color: #fff;
+              font-size: 2.5em;
+              line-height: 1;
+              display: block;
+              margin: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .cyberlunes main{
+    height: auto;
+    width: 100% !important;
+  }
+  .cyber-lunes {
+    grid-template-columns: minmax(auto, 100%);
+  }
+  .cyber-monday {
+    &__container {
+      grid-template-areas:
+        "title"
+        "video"
+        "clock";
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr 1fr;
+      height: auto;
+      &__title {
+        padding: initial;
+        .cyber-title{
+          padding: 20px;
+          background-color: $blue-cyber;
+          h1,h1 span,h3{
+            color: #fff;
+          }
+        }
+        img {
+          padding: 10px;
+          width: 60%;
+          display: block;
+          margin: auto;
+          background-color: #fff,
+        }
+      }
+
+      &__video {
+        height: auto;
+        img {
+          height: auto;
+          width: 350px;
+          bottom: 0%;
+          left: 50%;
+          transform: translate(-50%) scaleX(-1);
+        }
+      }
+      &__clock {
+        grid-area: clock;
+        padding: initial;
+        &__main-desc {
+          background-color: $blue-cyber;
+          color: #fff;
+          text-align: center;
+          padding: 20px;
+          h2{
+            color: #fff;
+            line-height: 1;
+          }
+          h4{
+            font-size: 1.2em;
+          }
+        }
+        &__content-text {
+          padding: 10px;
+          p{
+            font-size: 1em;
+            
+          }
+        }
+
+        &__counter {
+          ul {
+            li {
+              padding: 10px;
+              margin: 5px;
+              span {
+                font-size: 0.6em;
+              }
+              p {
+                font-size: 1.5em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .cyber-lunes {
+    width: 100% !important;
+  }
+  .cyber-monday {
+    &__container {
+      width: 100vw;
+      &__title {
+        .cyber-title{
+          h1{
+            font-size: 2em;
+          }
+          h3{
+            font-size: 2em;
+            line-height: .5;
+          }
+        }
+      }
+      &__video{
+        img {
+          width: 100%;
+        }
+      }
+      h2{
+        font-size: 1.8em;
+      }
+    }
+  }
+}
