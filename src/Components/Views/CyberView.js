@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 import titleImage from "../../arquivos/cyberlunestitle.png";
-// Video Local
-// import cyberVideo from "../../arquivos/video-cyber-lunes-2018.mp4";
 import imageCyberMan from "../../arquivos/cyber-img-hombre-landing.png"
 
 export default class CyberView extends Component {
-  componentDidMount() {
+  countDown(){
     const getRemainTime = deadline => {
       let now = new Date(),
         remainTime = (new Date(deadline) - now + 1000) / 1000,
@@ -44,7 +42,6 @@ export default class CyberView extends Component {
     };
 
     countDown("Nov 19 2018 00:00:00 GMT-0500");
-
   }
   render() {
     return (
@@ -66,18 +63,10 @@ export default class CyberView extends Component {
           <div className="overlay-cyber-image">
             <img src={imageCyberMan} alt="CyberLunes en tiendasjumbo.co" />
           </div>
-          
-          {/*<video id="video-cyber-jumbo" playsInline muted autoPlay loop preload>
-            <source
-              src="https://camiloarguello.xyz/video/cyber-video-cyber-lunes-2018.mp4"
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.
-    </video>*/}
         </div>
         <div className="cyber-monday__container__clock">
           <div className="cyber-monday__container__clock__main-desc">
-            <h2>¿Qué es cyberlunes?</h2>
+            <h2>Las ofertas de CyberLunes han finalizado.</h2>
           </div>
           <div className="cyber-monday__container__clock__content-text">
             <p>
@@ -93,25 +82,6 @@ export default class CyberView extends Component {
             </p>
           </div>
           <div className="cyber-monday__container__clock__counter">
-            <h5>Faltan:</h5>
-            <ul>
-              <li>
-                <span>Días</span>
-                <p id="days">00</p>
-              </li>
-              <li>
-                <span>Horas</span>
-                <p id="hours">00</p>
-              </li>
-              <li>
-                <span>Minutos</span>
-                <p id="minutes">00</p>
-              </li>
-              <li>
-                <span>Segundos</span>
-                <p id="seconds">00</p>
-              </li>
-            </ul>
             <img src={titleImage} alt="Cyber Lunes Jumbo" />
           </div>
         </div>
