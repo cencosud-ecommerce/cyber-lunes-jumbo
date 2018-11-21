@@ -1,6 +1,32 @@
 $blue-cyber : #00b8c3;
 $dark-blue-cyber: #063F3C;
 
+.btnn{
+  background-color: $blue-cyber;
+  width: 50%;
+  min-height: 25px;
+  height: 42px;
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin: 15px auto 0;
+  color: #FFF;
+  transition: all ease 1s;
+  font-weight: 600;
+  font-size: 1.5em;
+  &:hover{
+    background-color: $dark-blue-cyber;
+  }
+}
+
 .cyber-lunes {
   box-sizing: border-box;
   margin: 0;
@@ -105,6 +131,14 @@ $dark-blue-cyber: #063F3C;
         text-align: center;
         padding: 0 10px;
         color: $dark-blue-cyber;
+        h3 {
+          font-size: 1.5em;
+          font-weight: bold;
+          text-align: center;
+          line-height: .6;
+          color: $dark-blue-cyber;
+          margin: 10px 0;
+        }
         p{
           font-size: 1.2em;
         }
@@ -158,6 +192,10 @@ $dark-blue-cyber: #063F3C;
 }
 
 @media screen and (max-width: 760px) {
+  .btnn{
+    width: 90%;
+  }
+
   .cyberlunes main{
     height: auto;
     width: 100% !important;
@@ -185,7 +223,7 @@ $dark-blue-cyber: #063F3C;
         }
         img {
           padding: 10px;
-          width: 60%;
+          width: 40%;
           display: block;
           margin: auto;
           background-color: #fff,
@@ -252,6 +290,7 @@ $dark-blue-cyber: #063F3C;
   .cyber-monday {
     &__container {
       width: 100vw;
+      grid-template-rows: auto 200px 1fr;
       &__title {
         .cyber-title{
           h1{
@@ -270,7 +309,7 @@ $dark-blue-cyber: #063F3C;
       }
       &__video{
         img {
-          width: 100%;
+          width: 60%;
         }
       }
       h2{

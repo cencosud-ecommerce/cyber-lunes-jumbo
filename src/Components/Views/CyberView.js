@@ -74,6 +74,10 @@ export default class CyberView extends Component {
               <strong>Cyberlunes</strong>, un espacio para comprar a los mejores
               precios.
             </p>
+            <h3 style={{ marginTop: "20px"}}>
+              Consulta otras ofertas
+            </h3>
+            <a href="/ofertas" className="btnn" style={{display: "flex", marginBottom: "10px"}}><span className="text">Aquí</span></a>
           </div>
           <div className="cyber-monday__container__clock__counter">
             <img style={{marginTop: "30px"}} src={titleImage} alt="Cyber Lunes Jumbo" />
