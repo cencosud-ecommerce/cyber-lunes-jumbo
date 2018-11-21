@@ -70,19 +70,13 @@ export default class CyberView extends Component {
           </div>
           <div className="cyber-monday__container__clock__content-text">
             <p>
-            Llega la oportunidad de llevarte lo mejor con los mejores precios. Comienza el mejor momento del año para comprar, por eso en Jumbo
-              preparamos descuentos increíbles en{" "}
-              <strong>
-                tecnología, electrodomésticos, artículos para el hogar y mucho
-                más.
-              </strong>{" "}
-              El 19 y 20 de noviembre tiendasjumbo.co será la sede del{" "}
+              El 19 y 20 de noviembre tiendasjumbo.co fue la sede del{" "}
               <strong>Cyberlunes</strong>, un espacio para comprar a los mejores
               precios.
             </p>
           </div>
           <div className="cyber-monday__container__clock__counter">
-            <img src={titleImage} alt="Cyber Lunes Jumbo" />
+            <img style={{marginTop: "30px"}} src={titleImage} alt="Cyber Lunes Jumbo" />
           </div>
         </div>
       </section>
